@@ -4,8 +4,13 @@ import Output from './Output';
 
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state= {
+      inputText: ''
+      };
+  }
 
-  
   render() {
     return (
       <div className="App">
@@ -13,10 +18,13 @@ class App extends React.Component {
           <input 
             onChange={ (e) => {
               console.log(e.target.value);
+              this.setState({
+                inputText: e.target.value
+              });
             } }
           />
           <Output 
-            text="does it work?"
+            text={this.state.inputText}
           />
         </header>
       </div>
