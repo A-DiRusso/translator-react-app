@@ -7,29 +7,34 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state= {
-      inputText: ''
+      inputText: '',
+      names: ['Oakley', 'Milla', 'Angela']
       };
 
   }
 
   render() {
 
-    const names = ['Oakley', 'Milla', 'Angela'];
+   
 
 
     return (
       <div className="App">
         <header className="App-header">
-        <ul>
-          {names.map(name => <li>{name}</li>)} {/* arrow function Implicitly Returning*/}
-        </ul>
+        {/* <ul> */}
+          {/* {this.state.names.map(name => <li>{name}</li>)} arrow function Implicitly Returning */}
+        {/* </ul> */}
           
-          {/* <input 
+          <input 
             onChange={ this._updateInputText }
           />
           <Output 
             text={this.state.inputText}
-          /> */}
+          />
+          <Output
+            text={this.state.inputText}
+            transform="l33t"
+          />
         </header>
       </div> 
     );
